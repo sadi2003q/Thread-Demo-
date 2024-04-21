@@ -11,9 +11,9 @@ import SwiftfulFirestore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-private struct model : IdentifiableByString, Codable, Hashable {
+private struct model : IdentifiableByString, Hashable, Codable {
     var id = UUID().uuidString
-    let index: Int
+    var v: Int
 
 }
 
@@ -23,7 +23,6 @@ private struct model : IdentifiableByString, Codable, Hashable {
 // nothing
 // another code is written here
 
-@Observable
 private class StorageFile {
     
     static let shared = StorageFile()
@@ -61,6 +60,8 @@ struct Test_Downloading_Post: View {
     var body: some View {
         VStack {
             _button_Upload
+            _button_download
+            
             _m_info
         }
     }
@@ -68,18 +69,28 @@ struct Test_Downloading_Post: View {
     
     private var _m_info: some View {
         ScrollView {
-            VStack {
-                List {
-                    ForEach(m) { model in
-                        Text("\(model.index)")
-                    }
+            List {
+                List(m) { item in
+                           Text("Index: \(item.v)")
+                               .padding()
                 }
+                .foregroundStyle(Color.blue)
             }
+            .frame(maxHeight: .infinity)
         }
         
         
     }
     
+    
+    private var _button_download: some View {
+        Button("Downlaod") {
+            Task {
+                try await downloadDocument()
+            }
+        }
+        .buttonStyle(BorderedButtonStyle())
+    }
     
     private var _button_Upload: some View {
         Button("Upload Button") {
@@ -95,7 +106,7 @@ struct Test_Downloading_Post: View {
     private func uploadDocument() async throws {
         for i in 1..<81 {
             do {
-                try await StorageFile.shared.add(m: model(index: i))
+                try await StorageFile.shared.add(m: model(v: i))
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -106,7 +117,8 @@ struct Test_Downloading_Post: View {
     private func downloadDocument() async throws {
         do {
             self.m = try await StorageFile.shared.download()
-        } catch let error { throw error }
+            print("download complete : \(m.count)")
+        } catch let error { print(error.localizedDescription) }
     }
     
     
