@@ -54,7 +54,6 @@
 		EB660CAB2BC65CA600CC60FE /* Notification View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB660CAA2BC65CA600CC60FE /* Notification View.swift */; };
 		EB83377C2BC55000004B3927 /* Comment View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83377B2BC55000004B3927 /* Comment View.swift */; };
 		EB94E3CA2BADA42100172BFC /* Users Profile View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94E3C92BADA42100172BFC /* Users Profile View.swift */; };
-		EB9854222BD3CAEA00BD23F4 /* Test Downloading Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9854212BD3CAEA00BD23F4 /* Test Downloading Post.swift */; };
 		EBB05C6C2BC2D7CA0033287E /* Updating Firebase Datastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB05C6B2BC2D7CA0033287E /* Updating Firebase Datastore.swift */; };
 		EBC139F42BB49BBE00CE8F2C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC139F32BB49BBE00CE8F2C /* Storage.swift */; };
 		EBCE6B252BAC720700DDE03C /* Unsocial_MediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCE6B242BAC720700DDE03C /* Unsocial_MediaApp.swift */; };
@@ -89,7 +88,6 @@
 		EB660CAA2BC65CA600CC60FE /* Notification View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification View.swift"; sourceTree = "<group>"; };
 		EB83377B2BC55000004B3927 /* Comment View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comment View.swift"; sourceTree = "<group>"; };
 		EB94E3C92BADA42100172BFC /* Users Profile View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users Profile View.swift"; sourceTree = "<group>"; };
-		EB9854212BD3CAEA00BD23F4 /* Test Downloading Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test Downloading Post.swift"; sourceTree = "<group>"; };
 		EBB05C6B2BC2D7CA0033287E /* Updating Firebase Datastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Updating Firebase Datastore.swift"; sourceTree = "<group>"; };
 		EBC139F32BB49BBE00CE8F2C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		EBCE6B212BAC720700DDE03C /* Unsocial Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unsocial Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +169,6 @@
 				EB94E3C92BADA42100172BFC /* Users Profile View.swift */,
 				EB3715BB2BB2B59C00C56A79 /* Sign In View.swift */,
 				EB0B1D362BB9C6B500273EDB /* News Feed.swift */,
-				EB9854212BD3CAEA00BD23F4 /* Test Downloading Post.swift */,
 				EBDCA0AB2BCD1AF200556B06 /* Alternative NewsFeed View.swift */,
 				EB4740B22BB1F7580041D1E8 /* Login View.swift */,
 				EB83377B2BC55000004B3927 /* Comment View.swift */,
@@ -382,7 +379,6 @@
 				EB5EDAAE2BB4038D008F5C71 /* Authentication ViewModel.swift in Sources */,
 				EB0B1D392BB9C8BF00273EDB /* Public Information Model.swift in Sources */,
 				EBE1273D2BC856F000BB5112 /* Login or Sign up.swift in Sources */,
-				EB9854222BD3CAEA00BD23F4 /* Test Downloading Post.swift in Sources */,
 				EB5EDAAC2BB40022008F5C71 /* Database ViewModel.swift in Sources */,
 				EBF143112BB3906D00082163 /* Sign In Model.swift in Sources */,
 				EBF764CB2BBD3AA7009F5D2A /* Follow Account Model.swift in Sources */,
