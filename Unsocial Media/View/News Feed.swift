@@ -71,7 +71,6 @@ struct News_Feed: View {
             Task {
                 try await downloadCurrentUser()
                 try await Identification()
-//                try await DownloadPost()
                 if isReloading == false {
                     try await downloadPost()
                     self.isReloading = true
@@ -83,11 +82,6 @@ struct News_Feed: View {
                 try await downloadAllInformation(model:Post)
             }
         })
-//        .onDisappear {
-//            self.PostShow = []
-//            self.Post = []
-//            
-//        }
         .sheet(isPresented: $show_OptionSheet, content: {
             EditionView()
                 .presentationDetents([.fraction(0.2)])
@@ -100,118 +94,6 @@ struct News_Feed: View {
         .nav()
         
     }
-    /*
-    private var _postView : some View {
-        ScrollView {
-            Image(.threadsLogoPNG)
-                .resizable()
-                .renderingMode(.template)
-                .frame(width: 38, height: 45)
-                .foregroundStyle(Color.white)
-                .padding(10)
-            ForEach($PostShow) { $model in
-                HStack(alignment : .top) {
-                    Circle()
-                        .frame(width: 50, height: 50)
-                        .overlay {
-                            if let url = model.account.first?.url_profilePicture {
-                                
-                                AsyncImage(url: URL(string: url)) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
-                                        .clipShape(Circle())
-                                } placeholder: {
-                                    ProgressView()
-                                }
-
-                            }
-                            
-                        }
-                    VStack(alignment: .leading) {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                if let name = model.account.first?.name {
-                                    Text(name)
-                                        .bold()
-                                    Text("\(formattedDate(date: model.post.date))")
-                                }
-                            }
-                            Spacer()
-                            Image(systemName: "ellipsis")
-                                .bold()
-                                .onTapGesture {
-                                    show_OptionSheet.toggle()
-                                }
-                        }
-                        if !model.post.url_Image.isEmpty {
-                             Text(model.post.title)
-                             RoundedRectangle(cornerRadius: 20)
-                                 .frame(width: width*0.83, height: 340)
-                                 .overlay {
-                                     AsyncImage(url: URL(string: model.post.url_Image)) { image in
-                                         image
-                                             .resizable()
-                                             .aspectRatio(contentMode: .fill )
-                                             .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
-                                             .clipShape(RoundedRectangle(cornerRadius: 20)
-                                             )
-                                     } placeholder: {
-                                         ProgressView()
-                                     }
-                                 }
-                                 
-                                 .offset(x: -5)
-                             
-                        } else {
-                             Text(model.post.title)
-                                 .font(.title)
-                                 .offset(y: 5)
-                             
-                        }
-                        
-                        
-                        HStack(alignment: .top, spacing: 15) {
-                            VStack {
-                                
-                                Image(systemName: model.isLiked ? "heart.fill" : "heart")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .onTapGesture {
-                                        userReact(post: model.post, value: model.isLiked)
-                                        model.isLiked.toggle()
-                                    }
-                                
-                            }
-                            
-                            VStack {
-                                Image(systemName: "ellipsis.bubble")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .onTapGesture {
-                                        self.sent = model
-                                        show_commentView.toggle()
-                                    }
-                            }
-                            Image(systemName: "shared.with.you.circle")
-                                .resizable()
-                                .frame(width: 30, height: 30)
-                            
-                            Spacer()
-                        }
-                        .padding(.vertical)
-                    }
-                }
-                .paddingHoriZontal()
-            }
-            
-            
-            
-        }
-        .foregroundStyle(Color.white)
-        
-    }
-    */
     
     private var postView: some View {
         ScrollView {
@@ -321,7 +203,6 @@ struct News_Feed: View {
             .foregroundStyle(Color.white)
         }
         .padding(.horizontal)
-        
     }
     
     private func ValuePrint(value: Bool) {

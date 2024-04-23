@@ -90,11 +90,11 @@
 		EB94E3C92BADA42100172BFC /* Users Profile View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users Profile View.swift"; sourceTree = "<group>"; };
 		EBB05C6B2BC2D7CA0033287E /* Updating Firebase Datastore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Updating Firebase Datastore.swift"; sourceTree = "<group>"; };
 		EBC139F32BB49BBE00CE8F2C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		EBCE6B212BAC720700DDE03C /* Unsocial Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unsocial Media.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBCE6B242BAC720700DDE03C /* Unsocial_MediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsocial_MediaApp.swift; sourceTree = "<group>"; };
 		EBCE6B262BAC720700DDE03C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBCE6B282BAC720800DDE03C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBCE6B2B2BAC720800DDE03C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBD733A02BD7A2DF00ACFF75 /* Unsocial Media.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Unsocial Media.app"; path = "/Users/sadi_/Coding/IOS App/Thread-demo-/build/Debug-iphoneos/Unsocial Media.app"; sourceTree = "<absolute>"; };
 		EBDCA0AB2BCD1AF200556B06 /* Alternative NewsFeed View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alternative NewsFeed View.swift"; sourceTree = "<group>"; };
 		EBE1273A2BC84E9700BB5112 /* App View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App View.swift"; sourceTree = "<group>"; };
 		EBE1273C2BC856F000BB5112 /* Login or Sign up.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login or Sign up.swift"; sourceTree = "<group>"; };
@@ -205,28 +205,11 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
-		EB4740852BB1F5920041D1E8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		EBCE6B182BAC720700DDE03C = {
 			isa = PBXGroup;
 			children = (
 				EBCE6B232BAC720700DDE03C /* Unsocial Media */,
-				EBCE6B222BAC720700DDE03C /* Products */,
-				EB4740852BB1F5920041D1E8 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		EBCE6B222BAC720700DDE03C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EBCE6B212BAC720700DDE03C /* Unsocial Media.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EBCE6B232BAC720700DDE03C /* Unsocial Media */ = {
@@ -305,7 +288,7 @@
 				EB42F25C2BCEED1D00DD6C96 /* SwiftfulUI */,
 			);
 			productName = "Unsocial Media";
-			productReference = EBCE6B212BAC720700DDE03C /* Unsocial Media.app */;
+			productReference = EBD733A02BD7A2DF00ACFF75 /* Unsocial Media.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -339,7 +322,7 @@
 				EBDCA0A82BCD195600556B06 /* XCRemoteSwiftPackageReference "LRUCache" */,
 				EB42F25B2BCEED1D00DD6C96 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
 			);
-			productRefGroup = EBCE6B222BAC720700DDE03C /* Products */;
+			productRefGroup = EBCE6B182BAC720700DDE03C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
